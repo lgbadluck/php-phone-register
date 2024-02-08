@@ -20,11 +20,7 @@ if( isset($_GET['ac']) && $_GET['ac']==="del" ) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-            td.delete {
-  text-align: center;
-}
-    </style>
+    <style> td.delete { text-align: center; } </style>
     <title>Phone Register</title>
 </head>
 <body>
@@ -42,7 +38,7 @@ if( isset($_GET['ac']) && $_GET['ac']==="del" ) {
     $sql = "SELECT * FROM phones";
     $res = $db->query($sql);
     if($res->num_rows === 0){
-        echo "<tr><td colspan='4'> No records</td><tr>";
+        echo "<tr><td colspan='4'> No records</td></tr>";
     } else {
         while ( ($row = $res->fetch_array()) !== null ) {
             echo "<tr>";
